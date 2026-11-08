@@ -1,0 +1,6 @@
+{
+  "name": "Domine as IAs - Crie Imagens Profissionais",
+  "description": "Aprenda a criar imagens ultra realistas e domine as inteligências artificiais com packs exclusivos e prompts profissionais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

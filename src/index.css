@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #030303;
+    color: #f3f4f6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Realistic Animated Fire Flame and Aura */
+@keyframes flameAuraPulse {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.85;
+    filter: blur(40px) brightness(1.2);
+  }
+  33% {
+    transform: scale(1.08) translateY(-6px) skewX(-1deg);
+    opacity: 0.95;
+    filter: blur(35px) brightness(1.4);
+  }
+  66% {
+    transform: scale(1.03) translateY(-10px) skewX(1deg);
+    opacity: 0.9;
+    filter: blur(45px) brightness(1.3);
+  }
+}
+
+@keyframes fireTongues {
+  0%, 100% {
+    background-position: 0% 100%;
+    transform: scaleY(1);
+  }
+  50% {
+    background-position: 100% 0%;
+    transform: scaleY(1.06);
+  }
+}
+
+@keyframes emberRising {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120px) scale(0.3) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes neonFireBorder {
+  0%, 100% {
+    box-shadow: 
+      0 0 25px rgba(255, 85, 0, 0.4),
+      0 0 60px rgba(255, 50, 0, 0.2),
+      inset 0 0 20px rgba(255, 120, 0, 0.2);
+    border-color: rgba(249, 115, 22, 0.6);
+  }
+  50% {
+    box-shadow: 
+      0 0 45px rgba(255, 100, 0, 0.7),
+      0 0 90px rgba(255, 60, 0, 0.35),
+      inset 0 0 35px rgba(255, 140, 0, 0.3);
+    border-color: rgba(251, 146, 60, 0.85);
+  }
+}
+
+.animate-flame-aura {
+  animation: flameAuraPulse 4s ease-in-out infinite;
+}
+
+.animate-fire-border {
+  animation: neonFireBorder 3s ease-in-out infinite;
+}
+
+.fire-gradient-glow {
+  background: radial-gradient(circle at 50% 60%, rgba(255, 115, 0, 0.8) 0%, rgba(255, 60, 0, 0.5) 35%, rgba(200, 20, 0, 0.25) 60%, transparent 75%);
+}
+
+.fire-intense-aura {
+  background: conic-gradient(from 180deg at 50% 50%, #ff1a00, #ff6600, #ffaa00, #ff3700, #ff8c00, #ff1a00);
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
